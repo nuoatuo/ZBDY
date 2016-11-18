@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		741F559E1DDED6C000DC863B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F559D1DDED6C000DC863B /* AppDelegate.swift */; };
-		741F55A01DDED6C000DC863B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F559F1DDED6C000DC863B /* ViewController.swift */; };
 		741F55A31DDED6C000DC863B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741F55A11DDED6C000DC863B /* Main.storyboard */; };
 		741F55A51DDED6C000DC863B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 741F55A41DDED6C000DC863B /* Assets.xcassets */; };
 		741F55A81DDED6C000DC863B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741F55A61DDED6C000DC863B /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		741F559A1DDED6C000DC863B /* ZBDY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBDY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		741F559D1DDED6C000DC863B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		741F559F1DDED6C000DC863B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		741F55A21DDED6C000DC863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		741F55A41DDED6C000DC863B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		741F55A71DDED6C000DC863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,189 @@
 		741F559C1DDED6C000DC863B /* ZBDY */ = {
 			isa = PBXGroup;
 			children = (
+				741F55B11DDEE31900DC863B /* Classes */,
 				741F559D1DDED6C000DC863B /* AppDelegate.swift */,
-				741F559F1DDED6C000DC863B /* ViewController.swift */,
 				741F55A11DDED6C000DC863B /* Main.storyboard */,
 				741F55A41DDED6C000DC863B /* Assets.xcassets */,
 				741F55A61DDED6C000DC863B /* LaunchScreen.storyboard */,
 				741F55A91DDED6C000DC863B /* Info.plist */,
 			);
 			path = ZBDY;
+			sourceTree = "<group>";
+		};
+		741F55B11DDEE31900DC863B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				741F55BE1DDEE31900DC863B /* Main */,
+				741F55B61DDEE31900DC863B /* Home */,
+				741F55BA1DDEE31900DC863B /* Live */,
+				741F55B21DDEE31900DC863B /* Follow */,
+				741F55C21DDEE31900DC863B /* Profile */,
+				741F55C61DDEE31900DC863B /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		741F55B21DDEE31900DC863B /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				741F55B31DDEE31900DC863B /* Controller */,
+				741F55B41DDEE31900DC863B /* Model */,
+				741F55B51DDEE31900DC863B /* View */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		741F55B31DDEE31900DC863B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		741F55B41DDEE31900DC863B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		741F55B51DDEE31900DC863B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		741F55B61DDEE31900DC863B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				741F55B71DDEE31900DC863B /* Controller */,
+				741F55B81DDEE31900DC863B /* Model */,
+				741F55B91DDEE31900DC863B /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		741F55B71DDEE31900DC863B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		741F55B81DDEE31900DC863B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		741F55B91DDEE31900DC863B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		741F55BA1DDEE31900DC863B /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				741F55BB1DDEE31900DC863B /* Controller */,
+				741F55BC1DDEE31900DC863B /* Model */,
+				741F55BD1DDEE31900DC863B /* View */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		741F55BB1DDEE31900DC863B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		741F55BC1DDEE31900DC863B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		741F55BD1DDEE31900DC863B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		741F55BE1DDEE31900DC863B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				741F55BF1DDEE31900DC863B /* Controller */,
+				741F55C01DDEE31900DC863B /* Model */,
+				741F55C11DDEE31900DC863B /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		741F55BF1DDEE31900DC863B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		741F55C01DDEE31900DC863B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		741F55C11DDEE31900DC863B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		741F55C21DDEE31900DC863B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				741F55C31DDEE31900DC863B /* Controller */,
+				741F55C41DDEE31900DC863B /* Model */,
+				741F55C51DDEE31900DC863B /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		741F55C31DDEE31900DC863B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		741F55C41DDEE31900DC863B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		741F55C51DDEE31900DC863B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		741F55C61DDEE31900DC863B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741F55A01DDED6C000DC863B /* ViewController.swift in Sources */,
 				741F559E1DDED6C000DC863B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -260,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ZBDY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caissa.ZBDY;
@@ -272,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ZBDY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caissa.ZBDY;
@@ -290,7 +464,7 @@
 				741F55AB1DDED6C000DC863B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		741F55AC1DDED6C000DC863B /* Build configuration list for PBXNativeTarget "ZBDY" */ = {
 			isa = XCConfigurationList;
@@ -299,6 +473,7 @@
 				741F55AE1DDED6C000DC863B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
