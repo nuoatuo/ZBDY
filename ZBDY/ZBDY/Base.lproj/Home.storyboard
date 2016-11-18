@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-338" y="120"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="RmV-7i-eZl">
             <objects>
-                <viewController id="KY7-1d-2FJ" sceneMemberID="viewController">
+                <viewController id="KY7-1d-2FJ" customClass="HomeViewController" customModule="ZBDY" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="62p-MI-MtB"/>
                         <viewControllerLayoutGuide type="bottom" id="KN1-W5-UmG"/>
