@@ -20,6 +20,22 @@ class HomeViewController: UIViewController {
         return titleView
     }()
     
+    fileprivate lazy var pageContentView : XZPageContentView = {
+        //1.确定内容的frame
+       let contentH = kScreenHeight  - kStatusBarH - kNavigationBarH - kTitleViewH
+        let contentFrame = CGRect(x: 0.0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenWidth, height: contentH)
+        //2. 确定所有的子控制器
+        var childVCArray = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVCArray.append(vc)
+        }
+        
+        let contentView = XZPageContentView(frame: contentFrame, childVCArray: childVCArray, parentVC: self)
+        return contentView
+    }()
+    
     // MARK: - 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +60,9 @@ extension HomeViewController {
         
         //2.添加titleView
         view.addSubview(pageTitleView)
+        
+        //3.添加pageContentView
+        view.addSubview(pageContentView)
     }
     
     //设置导航栏
