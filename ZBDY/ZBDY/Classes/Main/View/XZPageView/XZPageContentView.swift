@@ -13,13 +13,13 @@ private let kContentCellID = "ContentCellID"
 class XZPageContentView: UIView {
     // MARK: - 定义属性
     fileprivate var childVCArray : [UIViewController]
-    fileprivate var parentVC : UIViewController
+    fileprivate weak var parentVC : UIViewController?
     
     // MARK: - 懒加载属性
-    fileprivate lazy var collectionView : UICollectionView = {
+    fileprivate lazy var collectionView : UICollectionView = {[weak self] in
         //1.创建layout
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!
         layout.minimumLineSpacing = 0.0
         layout.minimumInteritemSpacing = 0.0
         layout.scrollDirection = .horizontal
@@ -35,7 +35,7 @@ class XZPageContentView: UIView {
     }()
     
     // MARK: - 自定义构造函数
-    init(frame: CGRect, childVCArray : [UIViewController], parentVC : UIViewController) {
+    init(frame: CGRect, childVCArray : [UIViewController], parentVC : UIViewController?) {
         self.childVCArray = childVCArray
         self.parentVC = parentVC
         
@@ -56,7 +56,7 @@ extension XZPageContentView {
     fileprivate func setupUI() {
         //1.将所有的子控制器添加到父控制器中
         for childVC in childVCArray {
-            parentVC.addChildViewController(childVC)
+            parentVC?.addChildViewController(childVC)
         }
         
         //2.添加UICollectionView, 用于在Cell中存放控制器的View
@@ -89,4 +89,13 @@ extension XZPageContentView : UICollectionViewDataSource {
     }
 }
 
-
+// MARK: - 对外暴露的方法
+extension XZPageContentView {
+    
+    //设置当前下标
+    func setCurrentIndex(currentIndex : Int) {
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
+        
+    }
+}

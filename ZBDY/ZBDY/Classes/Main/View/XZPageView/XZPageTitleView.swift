@@ -8,13 +8,22 @@
 
 import UIKit
 
+protocol XZPageTitleViewDelegate : class {
+    func pageTitleView(titleView : XZPageTitleView, selectedIndex index : Int)
+}
+
 //滚动条高度
 private let kScrollLineViewH : CGFloat = 2.0
 
 class XZPageTitleView: UIView {
 
     // MARK: - 定义属性
+    //当前下标
+    fileprivate var currentIndex : Int = 0
+    //标题数据源
     fileprivate var titlesArray : [String]
+    //代理
+    weak var delegate : XZPageTitleViewDelegate?
     
     // MARK: - 懒加载属性
     fileprivate lazy var titleLabelsArray : [UILabel] = [UILabel]()
@@ -26,6 +35,7 @@ class XZPageTitleView: UIView {
         return scrollView
     }()
     
+    //滚动线视图
     fileprivate lazy var scrollLineView : UIView = {
         let scrollLineView = UIView()
         scrollLineView.backgroundColor = UIColor.orange
@@ -92,6 +102,12 @@ extension XZPageTitleView {
             //4.将label添加到bgScrollView中
             bgScrollView.addSubview(label)
             titleLabelsArray.append(label)
+            
+            //5.给Label添加手势
+            label.isUserInteractionEnabled = true
+            let tapGes  = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(tapGes:)))
+            label.addGestureRecognizer(tapGes)
+            
         }
     }
     
@@ -115,4 +131,29 @@ extension XZPageTitleView {
     }
 }
 
-
+// MARK: - 监听label的点击
+extension XZPageTitleView {
+    @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer) {
+        //1.获取当前Label的下标值
+        guard let currentLabel = tapGes.view as? UILabel else { return }
+        
+        //2.获取之前的Label
+        let oldLabel = titleLabelsArray[currentIndex]
+        
+        //3.切换文字的颜色
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        //4.保存最新Label的下标值
+        currentIndex = currentLabel.tag
+        
+        //5.滚动条位置发生改变
+        let scrollLineViewX = CGFloat(currentLabel.tag) * scrollLineView.frame.width
+        UIView.animate(withDuration: 0.15) { 
+            self.scrollLineView.frame.origin.x = scrollLineViewX
+        }
+        
+        //6.通知代理
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+    }
+}
