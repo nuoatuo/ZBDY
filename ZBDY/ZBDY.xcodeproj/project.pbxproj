@@ -18,8 +18,8 @@
 		741F55D41DDEE93D00DC863B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741F55D21DDEE93D00DC863B /* Profile.storyboard */; };
 		741F55D61DDEF36600DC863B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F55D51DDEF36600DC863B /* HomeViewController.swift */; };
 		741F55D91DDF00B900DC863B /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F55D81DDF00B900DC863B /* UIBarButtonItem-Extension.swift */; };
-		741F55DD1DDF0AB500DC863B /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F55DC1DDF0AB500DC863B /* XZPageTitleView.swift */; };
 		741F55DF1DDF0DCB00DC863B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F55DE1DDF0DCB00DC863B /* Common.swift */; };
+		746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		741F55D31DDEE93D00DC863B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ZBDY/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		741F55D51DDEF36600DC863B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		741F55D81DDF00B900DC863B /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
-		741F55DC1DDF0AB500DC863B /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
 		741F55DE1DDF0DCB00DC863B /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,17 +275,9 @@
 		741F55DA1DDF0AA000DC863B /* XZPageView */ = {
 			isa = PBXGroup;
 			children = (
-				741F55DB1DDF0AA000DC863B /* XZPageTitleView */,
+				746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */,
 			);
 			path = XZPageView;
-			sourceTree = "<group>";
-		};
-		741F55DB1DDF0AA000DC863B /* XZPageTitleView */ = {
-			isa = PBXGroup;
-			children = (
-				741F55DC1DDF0AB500DC863B /* XZPageTitleView.swift */,
-			);
-			path = XZPageTitleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,8 +360,8 @@
 				741F55C81DDEE85400DC863B /* MainViewController.swift in Sources */,
 				741F55D91DDF00B900DC863B /* UIBarButtonItem-Extension.swift in Sources */,
 				741F55D61DDEF36600DC863B /* HomeViewController.swift in Sources */,
+				746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */,
 				741F55DF1DDF0DCB00DC863B /* Common.swift in Sources */,
-				741F55DD1DDF0AB500DC863B /* XZPageTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
