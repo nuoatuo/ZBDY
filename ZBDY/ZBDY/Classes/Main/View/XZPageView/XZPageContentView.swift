@@ -22,6 +22,9 @@ class XZPageContentView: UIView {
     fileprivate weak var parentVC : UIViewController?
     //开始偏移X
     fileprivate var startOffsetX : CGFloat = 0.0
+    //是否禁止滚动代理
+    fileprivate var isForbidScrollDelegate : Bool = false
+    //代理
     weak var delegate : XZPageContentViewDelegate?
     // MARK: - 懒加载属性
     fileprivate lazy var collectionView : UICollectionView = {[weak self] in
@@ -101,10 +104,15 @@ extension XZPageContentView : UICollectionViewDataSource {
 // MARK: - 遵守UICollectionViewDelegate协议
 extension XZPageContentView : UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidScrollDelegate = false
+        
         startOffsetX = scrollView.contentOffset.x
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //0.判断是否是点击事件
+        if isForbidScrollDelegate { return }
+        
        //1.定义获取需要的数据
         //进度
         var progress : CGFloat = 0.0
@@ -164,6 +172,10 @@ extension XZPageContentView {
     
     //设置当前下标
     func setCurrentIndex(currentIndex : Int) {
+        //1.记录需要禁止执行代理方法
+        isForbidScrollDelegate = true
+        
+        //2.滚动到正确的位置
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width
         collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
         
