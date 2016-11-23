@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         let titleFrame = CGRect(x: 0.0, y: kStatusBarH + kNavigationBarH, width: kScreenWidth, height: kTitleViewH)
         let titlesArray = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = XZPageTitleView(frame: titleFrame, titlesArray: titlesArray)
-        titleView.delegate = self as! XZPageTitleViewDelegate?
+        titleView.delegate = self as XZPageTitleViewDelegate?
         return titleView
     }()
     
@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
         }
         
         let contentView = XZPageContentView(frame: contentFrame, childVCArray: childVCArray, parentVC: self)
+        contentView.delegate = self as XZPageContentViewDelegate?
         return contentView
     }()
     
@@ -43,7 +44,7 @@ class HomeViewController: UIViewController {
         
         //设置UI界面
         setupUI()
-        
+    
     }
     
 }
@@ -90,3 +91,9 @@ extension HomeViewController : XZPageTitleViewDelegate {
     }
 }
 
+// MARK: - 遵守XZPageContentViewDelegate协议
+extension HomeViewController : XZPageContentViewDelegate {
+    func pageContentView(contentView: XZPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        [pageTitleView .setTitle(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)]
+    }
+}

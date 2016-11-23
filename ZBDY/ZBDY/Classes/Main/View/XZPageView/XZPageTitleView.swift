@@ -157,3 +157,10 @@ extension XZPageTitleView {
         delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
     }
 }
+
+// MARK: - 对外暴露方法
+extension XZPageTitleView {
+    func setTitle(progress : CGFloat, sourceIndex : Int,  targetIndex : Int) {
+        
+    }
+}
