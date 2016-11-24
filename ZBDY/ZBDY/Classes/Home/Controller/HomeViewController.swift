@@ -23,11 +23,12 @@ class HomeViewController: UIViewController {
     
     fileprivate lazy var pageContentView : XZPageContentView = { [weak self] in
         //1.确定内容的frame
-       let contentH = kScreenHeight  - kStatusBarH - kNavigationBarH - kTitleViewH
+       let contentH = kScreenHeight  - kStatusBarH - kNavigationBarH - kTitleViewH - kTabbarH
         let contentFrame = CGRect(x: 0.0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenWidth, height: contentH)
         //2. 确定所有的子控制器
         var childVCArray = [UIViewController]()
-        for _ in 0..<4 {
+        childVCArray.append(RecommendViewController())
+        for _ in 0..<3 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCArray.append(vc)
@@ -94,6 +95,6 @@ extension HomeViewController : XZPageTitleViewDelegate {
 // MARK: - 遵守XZPageContentViewDelegate协议
 extension HomeViewController : XZPageContentViewDelegate {
     func pageContentView(contentView: XZPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
-        [pageTitleView .setTitle(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)]
+        pageTitleView .setTitle(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }
