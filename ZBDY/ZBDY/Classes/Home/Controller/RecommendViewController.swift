@@ -11,10 +11,12 @@ import UIKit
 //间距
 private let kItemMargin : CGFloat = 10
 private let kItemWidth : CGFloat = (kScreenWidth - 3 * kItemMargin) / 2
-private let kItemHeight : CGFloat = kItemWidth * 3 / 4
+private let kNormalItemHeight : CGFloat = kItemWidth * 3 / 4
+private let kPrettyItemHeight : CGFloat = kItemWidth * 4 / 3
 private let kHeaderViewH : CGFloat = 50.0
 
 private let kNormalCellID = "NormalCellID"
+private let kPrettyCellID = "PrettyCellID"
 private let kHeaderViewID = "HeaderViewID"
 
 class RecommendViewController: UIViewController {
@@ -23,7 +25,7 @@ class RecommendViewController: UIViewController {
     fileprivate lazy var collectionView : UICollectionView = { [unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemWidth, height: kItemHeight)
+        layout.itemSize = CGSize(width: kItemWidth, height: kNormalItemHeight)
         layout.minimumLineSpacing = 0.0
         layout.minimumInteritemSpacing = kItemMargin
         layout.headerReferenceSize = CGSize(width: kScreenWidth, height: kHeaderViewH)
@@ -35,10 +37,12 @@ class RecommendViewController: UIViewController {
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         collectionView.register(UINib(nibName: "CollectionViewNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
-      
+      collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
+        
         return collectionView;
     
     }()
@@ -46,10 +50,6 @@ class RecommendViewController: UIViewController {
     // MARK: - 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-   
         
         //设置UI界面
         setupUI()
@@ -69,7 +69,7 @@ extension RecommendViewController {
 }
 
 // MARK: - 遵守UICollectionViewDataSource的数据协议
-extension RecommendViewController : UICollectionViewDataSource {
+extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
     }
@@ -81,8 +81,15 @@ extension RecommendViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //1.获取Cell
-        let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        //1.定义Cell
+        let  cell : UICollectionViewCell!
+        
+        //2.取出Cell
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        }
         
         return cell
         
@@ -93,6 +100,14 @@ extension RecommendViewController : UICollectionViewDataSource {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
         
         return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kItemWidth, height: kPrettyItemHeight)
+        } else {
+            return CGSize(width: kItemWidth, height: kNormalItemHeight)
+        }
     }
     
 }

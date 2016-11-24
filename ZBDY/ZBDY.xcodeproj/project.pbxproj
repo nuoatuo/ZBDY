@@ -23,6 +23,8 @@
 		744343621DE6CA2300E5BB62 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343601DE6CA2300E5BB62 /* CollectionHeaderView.xib */; };
 		744343651DE6D02D00E5BB62 /* CollectionViewNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744343631DE6D02D00E5BB62 /* CollectionViewNormalCell.swift */; };
 		744343661DE6D02D00E5BB62 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */; };
+		744343691DE6DA0C00E5BB62 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */; };
+		7443436A1DE6DA0C00E5BB62 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */; };
 		746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */; };
 		746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7651DE43720001D48D4 /* XZPageContentView.swift */; };
 		746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */; };
@@ -48,6 +50,8 @@
 		744343601DE6CA2300E5BB62 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		744343631DE6D02D00E5BB62 /* CollectionViewNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewNormalCell.swift; sourceTree = "<group>"; };
 		744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
+		744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
 		746DB7651DE43720001D48D4 /* XZPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageContentView.swift; sourceTree = "<group>"; };
 		746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				741F55DA1DDF0AA000DC863B /* XZPageView */,
 				744343631DE6D02D00E5BB62 /* CollectionViewNormalCell.swift */,
 				744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */,
+				744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */,
+				744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				741F55CE1DDEE90F00DC863B /* Live.storyboard in Resources */,
 				744343661DE6D02D00E5BB62 /* CollectionViewNormalCell.xib in Resources */,
 				741F55CB1DDEE8F800DC863B /* Home.storyboard in Resources */,
+				7443436A1DE6DA0C00E5BB62 /* CollectionPrettyCell.xib in Resources */,
 				741F55D41DDEE93D00DC863B /* Profile.storyboard in Resources */,
 				741F55D11DDEE92500DC863B /* Follow.storyboard in Resources */,
 			);
@@ -388,6 +395,7 @@
 				741F55D91DDF00B900DC863B /* UIBarButtonItem-Extension.swift in Sources */,
 				741F55D61DDEF36600DC863B /* HomeViewController.swift in Sources */,
 				746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */,
+				744343691DE6DA0C00E5BB62 /* CollectionPrettyCell.swift in Sources */,
 				741F55DF1DDF0DCB00DC863B /* Common.swift in Sources */,
 				746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */,
 			);
