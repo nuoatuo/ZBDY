@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewNormalCell" customModule="ZBDY" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="195" height="126"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="wd9-eZ-VaY">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="4qj-dp-ObX"/>
+                            <constraint firstAttribute="width" constant="14" id="iEl-th-UWO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈哈哈哈哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4Y-0Q-yJn">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="DP0-Gz-wwb">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="逗你玩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kii-h6-I6E">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRI-yg-8B1">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="666在线" image="Image_online"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wd9-eZ-VaY" secondAttribute="bottom" constant="10" id="74S-wv-1lx"/>
+                <constraint firstItem="wd9-eZ-VaY" firstAttribute="top" secondItem="DP0-Gz-wwb" secondAttribute="bottom" constant="5" id="Dnh-1k-koW"/>
+                <constraint firstItem="aRI-yg-8B1" firstAttribute="trailing" secondItem="DP0-Gz-wwb" secondAttribute="trailing" constant="-5" id="Ld6-Wn-sMr"/>
+                <constraint firstItem="DP0-Gz-wwb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PVN-Jo-zlA"/>
+                <constraint firstAttribute="trailing" secondItem="DP0-Gz-wwb" secondAttribute="trailing" id="TQB-Rv-uOa"/>
+                <constraint firstItem="B4Y-0Q-yJn" firstAttribute="leading" secondItem="wd9-eZ-VaY" secondAttribute="trailing" constant="5" id="UWk-E8-Yv9"/>
+                <constraint firstItem="DP0-Gz-wwb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vdc-Zn-hPW"/>
+                <constraint firstItem="aRI-yg-8B1" firstAttribute="bottom" secondItem="DP0-Gz-wwb" secondAttribute="bottom" constant="-5" id="XQq-DE-mUu"/>
+                <constraint firstItem="Kii-h6-I6E" firstAttribute="leading" secondItem="DP0-Gz-wwb" secondAttribute="leading" constant="5" id="g3c-B0-d36"/>
+                <constraint firstItem="Kii-h6-I6E" firstAttribute="bottom" secondItem="DP0-Gz-wwb" secondAttribute="bottom" constant="-5" id="hQW-9O-NXx"/>
+                <constraint firstAttribute="trailing" secondItem="B4Y-0Q-yJn" secondAttribute="trailing" constant="5" id="i9P-hC-IWg"/>
+                <constraint firstItem="wd9-eZ-VaY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sdO-Lj-uNI"/>
+                <constraint firstItem="B4Y-0Q-yJn" firstAttribute="centerY" secondItem="wd9-eZ-VaY" secondAttribute="centerY" id="wvo-or-IJm"/>
+            </constraints>
+            <size key="customSize" width="195" height="126"/>
+            <point key="canvasLocation" x="0.5" y="-196"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Image_online" width="16" height="16"/>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+    </resources>
+</document>
