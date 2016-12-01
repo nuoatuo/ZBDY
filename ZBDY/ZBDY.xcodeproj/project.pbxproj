@@ -29,6 +29,7 @@
 		746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7651DE43720001D48D4 /* XZPageContentView.swift */; };
 		746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */; };
 		7470A7891DEFC75C007F5DDE /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A7881DEFC75C007F5DDE /* NetworkTools.swift */; };
+		7470A78D1DEFD181007F5DDE /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A78C1DEFD181007F5DDE /* RecommendViewModel.swift */; };
 		74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */; };
 		D71EC1341F82299F9303D1D9 /* Pods_ZBDY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		746DB7651DE43720001D48D4 /* XZPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageContentView.swift; sourceTree = "<group>"; };
 		746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		7470A7881DEFC75C007F5DDE /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		7470A78C1DEFD181007F5DDE /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		C3E0441F695F0FB96818BDC9 /* Pods-ZBDY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.release.xcconfig"; sourceTree = "<group>"; };
 		CAAF6AE54B77EF7F13FDE310 /* Pods-ZBDY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,8 +164,9 @@
 		741F55B61DDEE31900DC863B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7470A78A1DEFD109007F5DDE /* Model */,
+				7470A78B1DEFD109007F5DDE /* ViewModel */,
 				741F55B71DDEE31900DC863B /* Controller */,
-				741F55B81DDEE31900DC863B /* Model */,
 				741F55B91DDEE31900DC863B /* View */,
 			);
 			path = Home;
@@ -177,13 +180,6 @@
 				74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		741F55B81DDEE31900DC863B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		741F55B91DDEE31900DC863B /* View */ = {
@@ -231,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				741F55BF1DDEE31900DC863B /* Controller */,
-				741F55C01DDEE31900DC863B /* Model */,
 				741F55C11DDEE31900DC863B /* View */,
 			);
 			path = Main;
@@ -244,13 +239,6 @@
 				741F55C71DDEE85400DC863B /* MainViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		741F55C01DDEE31900DC863B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		741F55C11DDEE31900DC863B /* View */ = {
@@ -323,6 +311,21 @@
 				746DB7651DE43720001D48D4 /* XZPageContentView.swift */,
 			);
 			path = XZPageView;
+			sourceTree = "<group>";
+		};
+		7470A78A1DEFD109007F5DDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7470A78B1DEFD109007F5DDE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7470A78C1DEFD181007F5DDE /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		ADAB390E02F2CBF2563B76D0 /* Pods */ = {
@@ -479,6 +482,7 @@
 				741F55DF1DDF0DCB00DC863B /* Common.swift in Sources */,
 				7470A7891DEFC75C007F5DDE /* NetworkTools.swift in Sources */,
 				746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */,
+				7470A78D1DEFD181007F5DDE /* RecommendViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
