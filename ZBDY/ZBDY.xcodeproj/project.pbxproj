@@ -28,7 +28,9 @@
 		746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */; };
 		746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7651DE43720001D48D4 /* XZPageContentView.swift */; };
 		746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */; };
+		7470A7891DEFC75C007F5DDE /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A7881DEFC75C007F5DDE /* NetworkTools.swift */; };
 		74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */; };
+		D71EC1341F82299F9303D1D9 /* Pods_ZBDY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +57,11 @@
 		746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
 		746DB7651DE43720001D48D4 /* XZPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageContentView.swift; sourceTree = "<group>"; };
 		746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		7470A7881DEFC75C007F5DDE /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		C3E0441F695F0FB96818BDC9 /* Pods-ZBDY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.release.xcconfig"; sourceTree = "<group>"; };
+		CAAF6AE54B77EF7F13FDE310 /* Pods-ZBDY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.debug.xcconfig"; sourceTree = "<group>"; };
+		ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZBDY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +69,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71EC1341F82299F9303D1D9 /* Pods_ZBDY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F568C0BCBA9084789B4A486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		741F55911DDED6C000DC863B = {
 			isa = PBXGroup;
 			children = (
 				741F559C1DDED6C000DC863B /* ZBDY */,
 				741F559B1DDED6C000DC863B /* Products */,
+				ADAB390E02F2CBF2563B76D0 /* Pods */,
+				2F568C0BCBA9084789B4A486 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				741F55D71DDF006D00DC863B /* Extension */,
+				7470A7881DEFC75C007F5DDE /* NetworkTools.swift */,
 				741F55DE1DDF0DCB00DC863B /* Common.swift */,
 			);
 			path = Tools;
@@ -307,6 +325,15 @@
 			path = XZPageView;
 			sourceTree = "<group>";
 		};
+		ADAB390E02F2CBF2563B76D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAAF6AE54B77EF7F13FDE310 /* Pods-ZBDY.debug.xcconfig */,
+				C3E0441F695F0FB96818BDC9 /* Pods-ZBDY.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,9 +341,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 741F55AC1DDED6C000DC863B /* Build configuration list for PBXNativeTarget "ZBDY" */;
 			buildPhases = (
+				0A742C6D3AF1F997A6927E8F /* [CP] Check Pods Manifest.lock */,
 				741F55961DDED6C000DC863B /* Sources */,
 				741F55971DDED6C000DC863B /* Frameworks */,
 				741F55981DDED6C000DC863B /* Resources */,
+				CC9C698EBDC71E48BE40303C /* [CP] Embed Pods Frameworks */,
+				C406EEBB912E71500070E83C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,6 +369,8 @@
 				TargetAttributes = {
 					741F55991DDED6C000DC863B = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NEDBZL7MPY;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -381,6 +413,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A742C6D3AF1F997A6927E8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C406EEBB912E71500070E83C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC9C698EBDC71E48BE40303C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		741F55961DDED6C000DC863B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -397,6 +477,7 @@
 				746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */,
 				744343691DE6DA0C00E5BB62 /* CollectionPrettyCell.swift in Sources */,
 				741F55DF1DDF0DCB00DC863B /* Common.swift in Sources */,
+				7470A7891DEFC75C007F5DDE /* NetworkTools.swift in Sources */,
 				746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -544,7 +625,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -555,9 +636,11 @@
 		};
 		741F55AD1DDED6C000DC863B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAAF6AE54B77EF7F13FDE310 /* Pods-ZBDY.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = NEDBZL7MPY;
 				INFOPLIST_FILE = ZBDY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caissa.ZBDY;
@@ -568,9 +651,11 @@
 		};
 		741F55AE1DDED6C000DC863B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E0441F695F0FB96818BDC9 /* Pods-ZBDY.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = NEDBZL7MPY;
 				INFOPLIST_FILE = ZBDY/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.caissa.ZBDY;
