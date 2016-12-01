@@ -24,11 +24,16 @@ class AnchorGroup: NSObject {
     var icon_name : String = "home_header_normal"
     //定义主播的模型对象的数组
     lazy var anchors : [AnchorModel] = [AnchorModel]()
+    
+    // MARK: - 构造函数
+    override init() {
+        
+    }
+    
     init(dict : [String : NSObject]) {
         super.init()
         
         setValuesForKeys(dict)
     }
-    
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }
