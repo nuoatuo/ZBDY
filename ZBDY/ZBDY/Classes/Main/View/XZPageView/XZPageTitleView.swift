@@ -139,8 +139,12 @@ extension XZPageTitleView {
 // MARK: - 监听label的点击
 extension XZPageTitleView {
     @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer) {
-        //1.获取当前Label的下标值
+
+        //0.获取当前Label的下标值
         guard let currentLabel = tapGes.view as? UILabel else { return }
+        
+        //1.如果是重复点击同一个Title，那么直接返回
+        if currentLabel.tag == currentIndex { return }
         
         //2.获取之前的Label
         let oldLabel = titleLabelsArray[currentIndex]
