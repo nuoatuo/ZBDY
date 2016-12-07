@@ -35,7 +35,7 @@ class RecommendCycleView: UIView {
         autoresizingMask = []
         
         //注册Cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellID)
+        collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
 
     }
     
@@ -67,13 +67,22 @@ extension RecommendCycleView : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
         
-        let cycleModel = cycleModels![indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! CollectionCycleCell
         
-        
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
+        cell.cycleModel = cycleModels![indexPath.item]
         
         return cell
+    }
+}
+
+// MARK: - 遵守UICollectionView的代理协议
+extension RecommendCycleView : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+         //1.获取滚动的偏移量(滚到一半就显示下一个)
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width*0.5
+        
+        //2.计算pageControl的currentPage
+        pageControl.currentPage = Int(offsetX / scrollView.bounds.width)
     }
 }

@@ -132,8 +132,6 @@ extension RecommendViewModel {
         //version:当前版本号
         //http://www.douyutv.com/api/v1/slide/6?version=2.300
         NetworkTools.requestData(type: .GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
-            print(result)
-            
             //1.获取整体字典数据
             guard let resultDict = result as? [String : NSObject] else { return }
             

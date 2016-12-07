@@ -21,6 +21,7 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="twr-nC-ohv"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="iCh-8I-iK6"/>
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tOO-VM-6T0">
@@ -31,7 +32,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="vhA-BK-jmG" secondAttribute="bottom" id="4Um-74-jUc"/>
-                <constraint firstAttribute="bottom" secondItem="tOO-VM-6T0" secondAttribute="bottom" id="BCa-tq-OHT"/>
+                <constraint firstAttribute="bottom" secondItem="tOO-VM-6T0" secondAttribute="bottom" constant="-3" id="BCa-tq-OHT"/>
                 <constraint firstItem="vhA-BK-jmG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CJl-2O-Y30"/>
                 <constraint firstItem="vhA-BK-jmG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aaC-jv-8Zg"/>
                 <constraint firstAttribute="trailing" secondItem="tOO-VM-6T0" secondAttribute="trailing" constant="10" id="f8r-lh-5gJ"/>
