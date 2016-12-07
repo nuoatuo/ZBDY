@@ -73,8 +73,14 @@ class RecommendViewController: UIViewController {
 // MARK: - 请求数据
 extension RecommendViewController {
     fileprivate func loadData() {
+        //1.请求推荐数据
         recommendVM.requestData { 
             self.collectionView.reloadData()
+        }
+        
+        //2.请求轮播数据
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }

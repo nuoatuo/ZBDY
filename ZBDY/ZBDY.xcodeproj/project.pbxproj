@@ -37,6 +37,7 @@
 		7470A7941DF009EE007F5DDE /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A7931DF009EE007F5DDE /* AnchorModel.swift */; };
 		749960841DF57A5D00E740B4 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749960821DF57A5D00E740B4 /* CollectionBaseCell.swift */; };
 		749960851DF57A5D00E740B4 /* CollectionBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 749960831DF57A5D00E740B4 /* CollectionBaseCell.xib */; };
+		74D26D741DF7F376003B1D2D /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D26D731DF7F376003B1D2D /* CycleModel.swift */; };
 		74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */; };
 		D71EC1341F82299F9303D1D9 /* Pods_ZBDY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		7470A7931DF009EE007F5DDE /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		749960821DF57A5D00E740B4 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		749960831DF57A5D00E740B4 /* CollectionBaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionBaseCell.xib; sourceTree = "<group>"; };
+		74D26D731DF7F376003B1D2D /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		C3E0441F695F0FB96818BDC9 /* Pods-ZBDY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.release.xcconfig"; sourceTree = "<group>"; };
 		CAAF6AE54B77EF7F13FDE310 /* Pods-ZBDY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.debug.xcconfig"; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		7470A78A1DEFD109007F5DDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74D26D731DF7F376003B1D2D /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				7470A7921DF0061E007F5DDE /* AnchorGroup.swift in Sources */,
 				741F55C81DDEE85400DC863B /* MainViewController.swift in Sources */,
 				744343651DE6D02D00E5BB62 /* CollectionViewNormalCell.swift in Sources */,
+				74D26D741DF7F376003B1D2D /* CycleModel.swift in Sources */,
 				741F55D91DDF00B900DC863B /* UIBarButtonItem-Extension.swift in Sources */,
 				741F55D61DDEF36600DC863B /* HomeViewController.swift in Sources */,
 				746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */,
