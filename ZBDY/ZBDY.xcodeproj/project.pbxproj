@@ -25,6 +25,8 @@
 		744343661DE6D02D00E5BB62 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */; };
 		744343691DE6DA0C00E5BB62 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */; };
 		7443436A1DE6DA0C00E5BB62 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */; };
+		745D1E9A1DF6CA360068D3FD /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */; };
+		745D1E9C1DF6CA740068D3FD /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */; };
 		746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */; };
 		746DB7661DE43720001D48D4 /* XZPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7651DE43720001D48D4 /* XZPageContentView.swift */; };
 		746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */; };
@@ -60,6 +62,8 @@
 		744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
+		745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
 		746DB7651DE43720001D48D4 /* XZPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageContentView.swift; sourceTree = "<group>"; };
 		746DB7671DE43AFF001D48D4 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				7443435F1DE6CA2300E5BB62 /* CollectionHeaderView.swift */,
 				744343601DE6CA2300E5BB62 /* CollectionHeaderView.xib */,
+				745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */,
+				745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				744343661DE6D02D00E5BB62 /* CollectionViewNormalCell.xib in Resources */,
 				749960851DF57A5D00E740B4 /* CollectionBaseCell.xib in Resources */,
 				741F55CB1DDEE8F800DC863B /* Home.storyboard in Resources */,
+				745D1E9C1DF6CA740068D3FD /* RecommendCycleView.xib in Resources */,
 				7443436A1DE6DA0C00E5BB62 /* CollectionPrettyCell.xib in Resources */,
 				741F55D41DDEE93D00DC863B /* Profile.storyboard in Resources */,
 				741F55D11DDEE92500DC863B /* Follow.storyboard in Resources */,
@@ -493,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745D1E9A1DF6CA360068D3FD /* RecommendCycleView.swift in Sources */,
 				741F559E1DDED6C000DC863B /* AppDelegate.swift in Sources */,
 				744343611DE6CA2300E5BB62 /* CollectionHeaderView.swift in Sources */,
 				746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */,
