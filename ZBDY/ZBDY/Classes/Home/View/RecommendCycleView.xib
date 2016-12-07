@@ -29,7 +29,7 @@
                     <color key="currentPageIndicatorTintColor" red="1" green="0.41960784309999999" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="vhA-BK-jmG" secondAttribute="bottom" id="4Um-74-jUc"/>
                 <constraint firstAttribute="bottom" secondItem="tOO-VM-6T0" secondAttribute="bottom" constant="-3" id="BCa-tq-OHT"/>
