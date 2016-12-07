@@ -80,8 +80,12 @@ class RecommendViewController: UIViewController {
 extension RecommendViewController {
     fileprivate func loadData() {
         //1.请求推荐数据
-        recommendVM.requestData { 
+        recommendVM.requestData {
+            //1.展示推荐数据
             self.collectionView.reloadData()
+            
+            //2.将数据传递给gameView
+            self.gameView.groups = self.recommendVM.anchorGroups
         }
         
         //2.请求轮播数据

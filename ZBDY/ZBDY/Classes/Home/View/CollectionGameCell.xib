@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="ZBDY" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08s-36-Uab">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="vHy-qa-uve"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GIC-AM-Bo9">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="GIC-AM-Bo9" secondAttribute="height" multiplier="1:1" id="mdS-eP-pai"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="22.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="08s-36-Uab" firstAttribute="top" secondItem="GIC-AM-Bo9" secondAttribute="bottom" constant="5" id="2DL-fw-ifk"/>
+                <constraint firstItem="08s-36-Uab" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="DOy-W4-OyZ"/>
+                <constraint firstItem="GIC-AM-Bo9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="aEQ-MH-49O"/>
+                <constraint firstAttribute="bottom" secondItem="08s-36-Uab" secondAttribute="bottom" constant="10" id="cNE-uf-n9H"/>
+                <constraint firstItem="GIC-AM-Bo9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="cQq-To-pGf"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="GIC-AM-Bo9" id="64l-LS-stR"/>
+                <outlet property="titleLabel" destination="08s-36-Uab" id="xYf-hn-kX7"/>
+            </connections>
+            <point key="canvasLocation" x="-72" y="-157"/>
+        </collectionViewCell>
+    </objects>
+</document>
