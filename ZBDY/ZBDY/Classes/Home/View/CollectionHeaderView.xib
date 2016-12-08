@@ -20,7 +20,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_phone" translatesAutoresizingMaskIntoConstraints="NO" id="LEC-RV-ZdB">
                     <constraints>
                         <constraint firstAttribute="height" constant="18" id="P7A-ms-DgI"/>
-                        <constraint firstAttribute="width" constant="18" id="wd1-Hb-n2C"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="颜值" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-o5-fez">
@@ -52,9 +51,10 @@
             </constraints>
             <connections>
                 <outlet property="iconImageView" destination="LEC-RV-ZdB" id="c58-bT-EYF"/>
+                <outlet property="moreBtn" destination="vcz-NX-5Zj" id="cKS-x3-rUX"/>
                 <outlet property="titleLabel" destination="JbV-o5-fez" id="apG-0n-nhe"/>
             </connections>
-            <point key="canvasLocation" x="-43" y="-99"/>
+            <point key="canvasLocation" x="46" y="-246"/>
         </collectionReusableView>
     </objects>
     <resources>
