@@ -16,6 +16,7 @@ private let kGameCellID = "kGameCellID"
 class GameViewController: UIViewController {
 
     // MARK: 懒加载属性
+    fileprivate lazy var gameVM : GameViewModel = GameViewModel()
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -26,6 +27,8 @@ class GameViewController: UIViewController {
         
         //2.创建UIViewController
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+       collectionView.backgroundColor = UIColor.white
+        collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         collectionView.register( UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
        collectionView.dataSource = self
         
@@ -35,8 +38,9 @@ class GameViewController: UIViewController {
     // MARK: 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+     
         setupUI()
+        loadData()
     }
 
 }
@@ -48,16 +52,26 @@ extension GameViewController {
     }
 }
 
+// MARK: - 请求数据
+extension GameViewController {
+    fileprivate func loadData() {
+        gameVM.loadAllGameData { 
+            self.collectionView.reloadData()
+        }
+    }
+}
+
 // MARK: - 遵守的数据源&代理
 extension GameViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
+        return gameVM.games.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! CollectionGameCell
         
-        cell.backgroundColor = UIColor.randomColor()
+       cell.baseGame = gameVM.games[indexPath.item]
+
         return cell
     }
     
