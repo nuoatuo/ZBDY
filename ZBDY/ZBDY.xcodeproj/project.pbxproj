@@ -45,6 +45,7 @@
 		74D26D7F1DF81C75003B1D2D /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D26D7D1DF81C75003B1D2D /* CollectionGameCell.swift */; };
 		74D26D801DF81C75003B1D2D /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D26D7E1DF81C75003B1D2D /* CollectionGameCell.xib */; };
 		74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */; };
+		74E4425A1DF956E6009D0C08 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E442591DF956E6009D0C08 /* GameViewController.swift */; };
 		D71EC1341F82299F9303D1D9 /* Pods_ZBDY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		74D26D7D1DF81C75003B1D2D /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		74D26D7E1DF81C75003B1D2D /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
 		74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		74E442591DF956E6009D0C08 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C3E0441F695F0FB96818BDC9 /* Pods-ZBDY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.release.xcconfig"; sourceTree = "<group>"; };
 		CAAF6AE54B77EF7F13FDE310 /* Pods-ZBDY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZBDY.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZBDY/Pods-ZBDY.debug.xcconfig"; sourceTree = "<group>"; };
 		ECCBCC6BD82FBDEAB5FFA2F7 /* Pods_ZBDY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZBDY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 				741F55C91DDEE8F800DC863B /* Home.storyboard */,
 				741F55D51DDEF36600DC863B /* HomeViewController.swift */,
 				74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */,
+				74E442591DF956E6009D0C08 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				741F559E1DDED6C000DC863B /* AppDelegate.swift in Sources */,
 				744343611DE6CA2300E5BB62 /* CollectionHeaderView.swift in Sources */,
 				746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */,
+				74E4425A1DF956E6009D0C08 /* GameViewController.swift in Sources */,
 				74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */,
 				7470A7921DF0061E007F5DDE /* AnchorGroup.swift in Sources */,
 				741F55C81DDEE85400DC863B /* MainViewController.swift in Sources */,
