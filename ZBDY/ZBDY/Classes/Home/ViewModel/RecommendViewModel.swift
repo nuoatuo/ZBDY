@@ -26,7 +26,7 @@ class RecommendViewModel {
 extension RecommendViewModel {
     
     //请求推荐数据
-    func requestData(finishCallback : @escaping () -> ()) {
+    func requestData(_ finishCallback : @escaping () -> ()) {
         //一.定义参数
         /*
          参数说明
@@ -34,7 +34,7 @@ extension RecommendViewModel {
          limit: 获取数据的个数
          offset: 偏移的数据量
          */
-        let parameters = ["limit" : "4", "offset" : "0", "time" : NSDate.getCurrentTime() as NSString]
+        let parameters = ["limit" : "4", "offset" : "0", "time" : Date.getCurrentTime() as NSString]
         
         //二、创建Group
         let dGroup = DispatchGroup()
@@ -43,7 +43,7 @@ extension RecommendViewModel {
         //三.请求第一部分推荐数据
         dGroup.enter()
         //http://capi.douyucdn.cn/api/v1/getbigDataRoom?time=1480575387
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time" : NSDate.getCurrentTime() as NSString]) { (result) in
+        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time" : Date.getCurrentTime() as NSString]) { (result) in
             //1.将result转成字典类型
             guard  ((result as? [String : NSObject]) != nil) else { return }
             
@@ -70,7 +70,7 @@ extension RecommendViewModel {
         //四. 请求第二部分颜值数据
         dGroup.enter()
         //http://capi.douyucdn.cn/api/v1/getVerticalRoom?limit=4&offset=0&time=1480575387
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parameters) { (result) in
+        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parameters) { (result) in
             //1.将result转成字典类型
             guard  ((result as? [String : NSObject]) != nil) else { return }
             
@@ -97,7 +97,7 @@ extension RecommendViewModel {
         //五. 请求2-12部分游戏数据
         dGroup.enter()
         //http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1480575387
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters:parameters) { (result) in
+        NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters:parameters) { (result) in
             //1.将result转成字典类型
             guard  ((result as? [String : NSObject]) != nil) else { return }
             
@@ -108,6 +108,8 @@ extension RecommendViewModel {
             let dataArray = result["data"] as! [[String : NSObject]]
             for dict in dataArray {
                 let group = AnchorGroup(dict: dict as [String : NSObject])
+                guard group.anchors.count != 0 else { continue }
+                
                 self.anchorGroups.append(group)
             }
             
@@ -128,10 +130,10 @@ extension RecommendViewModel {
     }
     
     //请求无限轮播的数据
-    func requestCycleData(finishCallback : @escaping () -> ()) {
+    func requestCycleData(_ finishCallback : @escaping () -> ()) {
         //version:当前版本号
         //http://www.douyutv.com/api/v1/slide/6?version=2.300
-        NetworkTools.requestData(type: .GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+        NetworkTools.requestData(.get, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
             //1.获取整体字典数据
             guard let resultDict = result as? [String : NSObject] else { return }
             

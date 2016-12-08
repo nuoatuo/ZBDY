@@ -10,15 +10,15 @@ import UIKit
 import Alamofire
 
 enum MethodType {
-    case GET
-    case POST
+    case get
+    case post
 }
 
 class NetworkTools {
-    class func requestData(type: MethodType, URLString : String, parameters: [String : NSString]? = nil, finishedCallback: @escaping (_ result : AnyObject) -> ()) {
+    class func requestData(_ type: MethodType, URLString : String, parameters: [String : Any]? = nil, finishedCallback: @escaping (_ result : AnyObject) -> ()) {
         
         //1.获取类型
-        let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
+        let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         
         //2.发送网络请求
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (responseString) in

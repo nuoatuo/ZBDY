@@ -13,13 +13,13 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChildVC(storyboardName: "Home")
-        addChildVC(storyboardName: "Live")
-        addChildVC(storyboardName: "Follow")
-        addChildVC(storyboardName: "Profile")
+        addChildVC("Home")
+        addChildVC("Live")
+        addChildVC("Follow")
+        addChildVC("Profile")
     }
 
-    private func addChildVC(storyboardName : String) {
+    fileprivate func addChildVC(_ storyboardName : String) {
         //1.通过storyboard获取控制器
         let childVC = UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()!
         

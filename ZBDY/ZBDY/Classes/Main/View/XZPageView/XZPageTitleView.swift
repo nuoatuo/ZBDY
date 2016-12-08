@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - 定义协议
 protocol XZPageTitleViewDelegate : class {
-    func pageTitleView(titleView : XZPageTitleView, selectedIndex index : Int)
+    func pageTitleView(_ titleView : XZPageTitleView, selectedIndex index : Int)
 }
 
 // MARK: - 定义常量
@@ -83,7 +83,7 @@ extension XZPageTitleView {
     }
     
     //添加title对应的label
-    private func setupTitleLabels() {
+    fileprivate func setupTitleLabels() {
         
         //0.确定label的一些frame的值
         let labelW : CGFloat = frame.width / CGFloat(titlesArray.count)
@@ -117,7 +117,7 @@ extension XZPageTitleView {
     }
     
     //设置底线和滚动的滑块
-    private func setupBottomLineAndScrollLine() {
+    fileprivate func setupBottomLineAndScrollLine() {
         //1.添加底线
         let bottomLine = UIView()
         bottomLine.backgroundColor = UIColor.lightGray
@@ -163,7 +163,7 @@ extension XZPageTitleView {
         }
         
         //6.通知代理
-        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+        delegate?.pageTitleView(self, selectedIndex: currentIndex)
     }
 }
 

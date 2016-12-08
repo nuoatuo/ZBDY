@@ -23,7 +23,7 @@ class RecommendCycleView: UIView {
             pageControl.numberOfPages = cycleModels?.count ?? 0
             
             //3.默认滚动到中间某一个位置
-            let indexPath = NSIndexPath(item: (cycleModels?.count ?? 0) * 10, section: 0)
+            let indexPath = IndexPath(item: (cycleModels?.count ?? 0) * 10, section: 0)
            collectionView.scrollToItem(at: indexPath as IndexPath, at: .left, animated: false)
             
             //4.添加定时器
@@ -117,7 +117,7 @@ extension RecommendCycleView {
         cycleTimer = nil
     }
     
-    @objc private func scrollToNext() {
+    @objc fileprivate func scrollToNext() {
         //1.获取滚动的偏移量
         let currentOffsetX = collectionView.contentOffset.x
         let offsetX = currentOffsetX + collectionView.bounds.width

@@ -69,7 +69,7 @@ extension HomeViewController {
     }
     
     //设置导航栏
-    private func setupNavigationBar(){
+    fileprivate func setupNavigationBar(){
         
         //1、设置左侧的Item
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
@@ -87,7 +87,7 @@ extension HomeViewController {
 
 // MARK: - 遵守XZPageTitleViewDelegate协议
 extension HomeViewController : XZPageTitleViewDelegate {
-    func pageTitleView(titleView: XZPageTitleView, selectedIndex index: Int) {
+    func pageTitleView(_ titleView: XZPageTitleView, selectedIndex index: Int) {
        pageContentView .setCurrentIndex(currentIndex: index)
     }
 }

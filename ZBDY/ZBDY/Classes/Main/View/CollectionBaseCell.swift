@@ -35,8 +35,8 @@ class CollectionBaseCell: UICollectionViewCell {
             nickNameLabel.text = anchor.nickname
             
             //3..设置封面图片
-            guard let iconURL = NSURL(string: anchor.vertical_src) else { return }
-            iconImageView.kf.setImage(with: ImageResource.init(downloadURL: iconURL as URL))
+            let iconURL = URL(string: anchor.vertical_src)
+            iconImageView.kf.setImage(with: iconURL)
         }
     }
 }
