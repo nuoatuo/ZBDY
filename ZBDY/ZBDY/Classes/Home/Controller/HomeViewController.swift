@@ -30,11 +30,7 @@ class HomeViewController: UIViewController {
         childVCArray.append(RecommendViewController())
         childVCArray.append(GameViewController())
         childVCArray.append(AmuseViewController())
-        for _ in 0..<1 {
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
-            childVCArray.append(vc)
-        }
+        childVCArray.append(FunnyViewController())
         
         let contentView = XZPageContentView(frame: contentFrame, childVCArray: childVCArray, parentVC: self)
         contentView.delegate = self as XZPageContentViewDelegate?

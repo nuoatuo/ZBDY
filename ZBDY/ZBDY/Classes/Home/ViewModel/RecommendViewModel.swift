@@ -96,7 +96,7 @@ extension RecommendViewModel {
         //五. 请求2-12部分游戏数据
         dGroup.enter()
         //http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offset=0&time=1480575387
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
+        loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             //离开组
             dGroup.leave()
             //print("请求到2-12组数据")
