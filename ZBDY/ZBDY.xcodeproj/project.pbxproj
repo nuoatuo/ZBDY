@@ -35,6 +35,7 @@
 		7470A78F1DEFF22F007F5DDE /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A78E1DEFF22F007F5DDE /* NSDate-Extension.swift */; };
 		7470A7921DF0061E007F5DDE /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A7911DF0061E007F5DDE /* AnchorGroup.swift */; };
 		7470A7941DF009EE007F5DDE /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7470A7931DF009EE007F5DDE /* AnchorModel.swift */; };
+		74875EA41DFA5A1100248FD8 /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74875EA31DFA5A1100248FD8 /* AmuseViewController.swift */; };
 		749960841DF57A5D00E740B4 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749960821DF57A5D00E740B4 /* CollectionBaseCell.swift */; };
 		749960851DF57A5D00E740B4 /* CollectionBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 749960831DF57A5D00E740B4 /* CollectionBaseCell.xib */; };
 		74D26D741DF7F376003B1D2D /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D26D731DF7F376003B1D2D /* CycleModel.swift */; };
@@ -83,6 +84,7 @@
 		7470A78E1DEFF22F007F5DDE /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		7470A7911DF0061E007F5DDE /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		7470A7931DF009EE007F5DDE /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		74875EA31DFA5A1100248FD8 /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		749960821DF57A5D00E740B4 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		749960831DF57A5D00E740B4 /* CollectionBaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionBaseCell.xib; sourceTree = "<group>"; };
 		74D26D731DF7F376003B1D2D /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				741F55D51DDEF36600DC863B /* HomeViewController.swift */,
 				74E3D9FB1DE5A16100FF362C /* RecommendViewController.swift */,
 				74E442591DF956E6009D0C08 /* GameViewController.swift */,
+				74875EA31DFA5A1100248FD8 /* AmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				74E4425E1DF96206009D0C08 /* GameModel.swift in Sources */,
 				74E442601DF9637E009D0C08 /* BaseGameModel.swift in Sources */,
 				74D26D741DF7F376003B1D2D /* CycleModel.swift in Sources */,
+				74875EA41DFA5A1100248FD8 /* AmuseViewController.swift in Sources */,
 				741F55D91DDF00B900DC863B /* UIBarButtonItem-Extension.swift in Sources */,
 				741F55D61DDEF36600DC863B /* HomeViewController.swift in Sources */,
 				746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */,

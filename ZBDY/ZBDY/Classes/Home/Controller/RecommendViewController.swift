@@ -124,7 +124,7 @@ extension RecommendViewController {
 }
 
 // MARK: - 遵守UICollectionViewDataSource的数据协议
-extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return recommendVM.anchorGroups.count
     }
