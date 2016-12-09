@@ -87,8 +87,12 @@ extension GameViewController {
 // MARK: - 请求数据
 extension GameViewController {
     fileprivate func loadData() {
-        gameVM.loadAllGameData { 
+        gameVM.loadAllGameData {
+            //1.展示全部游戏
             self.collectionView.reloadData()
+            
+            //2.展示常用游戏（取前10条）
+            self.gameView.groups = Array(self.gameVM.games[0..<10])
         }
     }
 }
