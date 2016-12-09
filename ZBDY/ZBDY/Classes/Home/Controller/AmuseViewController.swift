@@ -17,7 +17,7 @@ class AmuseViewController: BaseAnchorViewController {
     fileprivate lazy var menuView : AmuseMenuView = {
         let menuView = AmuseMenuView.amuseMenuView()
         menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: kScreenWidth, height: kMenuViewH)
-        menuView.backgroundColor = UIColor.purple
+        
         return menuView
     }()
 }
@@ -44,6 +44,10 @@ extension AmuseViewController {
         amuseVM.loadAmuseData {
             //刷新数据
             self.collectionView.reloadData()
+            
+            var tempGroups = self.amuseVM.anchorGroups
+            tempGroups.removeFirst()
+            self.menuView.groups = tempGroups
         }
     }
 }
