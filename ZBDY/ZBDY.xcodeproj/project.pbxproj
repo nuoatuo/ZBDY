@@ -29,6 +29,7 @@
 		744735D51DFA9DC000B32D64 /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744735D31DFA9DC000B32D64 /* AmuseMenuViewCell.xib */; };
 		744735D71DFAACB600B32D64 /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744735D61DFAACB600B32D64 /* FunnyViewController.swift */; };
 		744735D91DFAAFAC00B32D64 /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744735D81DFAAFAC00B32D64 /* FunnyViewModel.swift */; };
+		744735DB1DFAB6AD00B32D64 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744735DA1DFAB6AD00B32D64 /* BaseViewController.swift */; };
 		745D1E9A1DF6CA360068D3FD /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */; };
 		745D1E9C1DF6CA740068D3FD /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */; };
 		746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */; };
@@ -87,6 +88,7 @@
 		744735D31DFA9DC000B32D64 /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		744735D61DFAACB600B32D64 /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		744735D81DFAAFAC00B32D64 /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
+		744735DA1DFAB6AD00B32D64 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				741F55A11DDED6C000DC863B /* Main.storyboard */,
 				741F55C71DDEE85400DC863B /* MainViewController.swift */,
 				74875EAA1DFA7CFD00248FD8 /* BaseAnchorViewController.swift */,
+				744735DA1DFAB6AD00B32D64 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				74875EA61DFA5E0B00248FD8 /* AmuseViewModel.swift in Sources */,
 				744343611DE6CA2300E5BB62 /* CollectionHeaderView.swift in Sources */,
 				74E4425C1DF95F19009D0C08 /* GameViewModel.swift in Sources */,
+				744735DB1DFAB6AD00B32D64 /* BaseViewController.swift in Sources */,
 				746DB7681DE43AFF001D48D4 /* UIColor-Extension.swift in Sources */,
 				74875EAB1DFA7CFD00248FD8 /* BaseAnchorViewController.swift in Sources */,
 				74E4425A1DF956E6009D0C08 /* GameViewController.swift in Sources */,

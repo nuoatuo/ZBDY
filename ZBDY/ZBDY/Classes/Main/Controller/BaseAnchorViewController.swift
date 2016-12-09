@@ -22,7 +22,7 @@ let kNormalItemWidth : CGFloat = (kScreenWidth - 3 * kItemMargin) / 2
 let kNormalItemHeight : CGFloat = kNormalItemWidth * 3 / 4
 let kPrettyItemHeight : CGFloat = kNormalItemWidth * 4 / 3
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController : BaseViewController {
     
     // MARK: - 定义属性
     var baseVM : BaseViewModel!
@@ -63,9 +63,15 @@ class BaseAnchorViewController: UIViewController {
 
 // MARK: - 设置UI界面内容
 extension BaseAnchorViewController {
-     func setupUI() {
-        //1.将UICollectionView添加到控制器的View中
+     override func setupUI() {
+        //1.给父类中内容View的引用进行赋值
+        contentView = collectionView
+        
+        //2.添加collectionView
         view.addSubview(collectionView)
+        
+        //3.调用setupUI()
+        super.setupUI()
     }
 }
 
