@@ -25,6 +25,8 @@
 		744343661DE6D02D00E5BB62 /* CollectionViewNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */; };
 		744343691DE6DA0C00E5BB62 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */; };
 		7443436A1DE6DA0C00E5BB62 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */; };
+		744735D41DFA9DC000B32D64 /* AmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744735D21DFA9DC000B32D64 /* AmuseMenuViewCell.swift */; };
+		744735D51DFA9DC000B32D64 /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 744735D31DFA9DC000B32D64 /* AmuseMenuViewCell.xib */; };
 		745D1E9A1DF6CA360068D3FD /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */; };
 		745D1E9C1DF6CA740068D3FD /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */; };
 		746DB7641DE4362B001D48D4 /* XZPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */; };
@@ -79,6 +81,8 @@
 		744343641DE6D02D00E5BB62 /* CollectionViewNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewNormalCell.xib; sourceTree = "<group>"; };
 		744343671DE6DA0C00E5BB62 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		744343681DE6DA0C00E5BB62 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		744735D21DFA9DC000B32D64 /* AmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuViewCell.swift; sourceTree = "<group>"; };
+		744735D31DFA9DC000B32D64 /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		745D1E991DF6CA360068D3FD /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		745D1E9B1DF6CA740068D3FD /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		746DB7631DE4362B001D48D4 /* XZPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZPageTitleView.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 				74D26D7E1DF81C75003B1D2D /* CollectionGameCell.xib */,
 				74875EAC1DFA952E00248FD8 /* AmuseMenuView.swift */,
 				74875EAE1DFA955300248FD8 /* AmuseMenuView.xib */,
+				744735D21DFA9DC000B32D64 /* AmuseMenuViewCell.swift */,
+				744735D31DFA9DC000B32D64 /* AmuseMenuViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 				74D26D7C1DF8131F003B1D2D /* RecommendGameView.xib in Resources */,
 				744343661DE6D02D00E5BB62 /* CollectionViewNormalCell.xib in Resources */,
 				749960851DF57A5D00E740B4 /* CollectionBaseCell.xib in Resources */,
+				744735D51DFA9DC000B32D64 /* AmuseMenuViewCell.xib in Resources */,
 				741F55CB1DDEE8F800DC863B /* Home.storyboard in Resources */,
 				745D1E9C1DF6CA740068D3FD /* RecommendCycleView.xib in Resources */,
 				7443436A1DE6DA0C00E5BB62 /* CollectionPrettyCell.xib in Resources */,
@@ -573,6 +580,7 @@
 				74E4425A1DF956E6009D0C08 /* GameViewController.swift in Sources */,
 				74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */,
 				7470A7921DF0061E007F5DDE /* AnchorGroup.swift in Sources */,
+				744735D41DFA9DC000B32D64 /* AmuseMenuViewCell.swift in Sources */,
 				741F55C81DDEE85400DC863B /* MainViewController.swift in Sources */,
 				744343651DE6D02D00E5BB62 /* CollectionViewNormalCell.swift in Sources */,
 				74875EA91DFA79C900248FD8 /* BaseViewModel.swift in Sources */,

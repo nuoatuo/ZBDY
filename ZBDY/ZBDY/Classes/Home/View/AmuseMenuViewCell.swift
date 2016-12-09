@@ -1,5 +1,5 @@
 //
-//  AmuseMenuView.swift
+//  AmuseMenuViewCell.swift
 //  ZBDY
 //
 //  Created by 古今 on 2016/12/9.
@@ -8,46 +8,44 @@
 
 import UIKit
 
-private let kMenuCellID = "kMenuCellID"
+private let kGameCellID = "kGameCellID"
 
-class AmuseMenuView: UIView {
-    
+class AmuseMenuViewCell: UICollectionViewCell {
+
     // MARK: - 控件属性
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
-
-    // MARK: - 从XIB中加载出来
+   
+    // MARK: - 从xib中加载
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        collectionView.register(UINib(nibName: "AmuseMenuViewCell", bundle: nil), forCellWithReuseIdentifier: kMenuCellID)
+        collectionView.register(UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = collectionView.bounds.size
+        let itemW = collectionView.bounds.width / 4
+        let itemH = collectionView.bounds.height / 2
+        layout.itemSize = CGSize(width: itemW, height: itemH)
     }
+
 }
 
-extension AmuseMenuView {
-    class func amuseMenuView() -> AmuseMenuView {
-        return Bundle.main.loadNibNamed("AmuseMenuView", owner: nil, options: nil)?.first as! AmuseMenuView
-    }
-}
 
-extension AmuseMenuView  : UICollectionViewDataSource {
-
+extension AmuseMenuViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kMenuCellID, for: indexPath)
+        //1.取出cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
         
+        //2.给Cell设置数据
         cell.backgroundColor = UIColor.randomColor()
+        
         return cell
     }
-    
 }
