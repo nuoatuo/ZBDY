@@ -50,20 +50,20 @@ class BaseAnchorViewController : BaseViewController {
         return collectionView;
         
         }()
-
+    
     
     // MARK: - 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         setupUI()
+        setupUI()
         loadData()
     }
 }
 
 // MARK: - 设置UI界面内容
 extension BaseAnchorViewController {
-     override func setupUI() {
+    override func setupUI() {
         //1.给父类中内容View的引用进行赋值
         contentView = collectionView
         
@@ -77,12 +77,12 @@ extension BaseAnchorViewController {
 
 // MARK: - 请求数据
 extension BaseAnchorViewController {
-     func loadData() {
+    func loadData() {
     }
 }
 
-// MARK: - 遵守UICollectionViewDataSource的数据协议
-extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+// MARK: - 遵守UICollectionViewDataSource的数据源
+extension BaseAnchorViewController : UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return baseVM.anchorGroups.count
@@ -115,3 +115,30 @@ extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionVie
     
 }
 
+// MARK: - 遵守UICollectionViewDelegate的代理协议
+extension BaseAnchorViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //1.取出对应的主播信息
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        //2.判断是秀场房间||普通房间
+        anchor.isVertical == 0 ? pushNormalRoomVC() : presentShowRoomVC()
+    }
+    
+    private func presentShowRoomVC() {
+        //1.创建showRoomVC
+        let showRoomVC = RoomShowViewController()
+        
+        //2.以Modal方式弹出
+        present(showRoomVC, animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomVC() {
+        //1.创建normalRoomVC
+        let normalRoomVC = RoomNormalViewController()
+        
+        //2.以push方式弹出
+        navigationController?.pushViewController(normalRoomVC, animated: true)
+    }
+    
+}
