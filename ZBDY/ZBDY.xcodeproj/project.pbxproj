@@ -50,6 +50,7 @@
 		749960851DF57A5D00E740B4 /* CollectionBaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 749960831DF57A5D00E740B4 /* CollectionBaseCell.xib */; };
 		74AF02031DFE487500CD9EE1 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AF02021DFE487500CD9EE1 /* RoomShowViewController.swift */; };
 		74AF02051DFE48E300CD9EE1 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AF02041DFE48E300CD9EE1 /* RoomNormalViewController.swift */; };
+		74AF02071DFE530A00CD9EE1 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AF02061DFE530A00CD9EE1 /* CustomNavigationController.swift */; };
 		74D26D741DF7F376003B1D2D /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D26D731DF7F376003B1D2D /* CycleModel.swift */; };
 		74D26D771DF7FC33003B1D2D /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D26D751DF7FC33003B1D2D /* CollectionCycleCell.swift */; };
 		74D26D781DF7FC33003B1D2D /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D26D761DF7FC33003B1D2D /* CollectionCycleCell.xib */; };
@@ -111,6 +112,7 @@
 		749960831DF57A5D00E740B4 /* CollectionBaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionBaseCell.xib; sourceTree = "<group>"; };
 		74AF02021DFE487500CD9EE1 /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		74AF02041DFE48E300CD9EE1 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		74AF02061DFE530A00CD9EE1 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		74D26D731DF7F376003B1D2D /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		74D26D751DF7FC33003B1D2D /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		74D26D761DF7FC33003B1D2D /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				741F55C71DDEE85400DC863B /* MainViewController.swift */,
 				744735DA1DFAB6AD00B32D64 /* BaseViewController.swift */,
 				74875EAA1DFA7CFD00248FD8 /* BaseAnchorViewController.swift */,
+				74AF02061DFE530A00CD9EE1 /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				74E3D9FC1DE5A16100FF362C /* RecommendViewController.swift in Sources */,
 				7470A7921DF0061E007F5DDE /* AnchorGroup.swift in Sources */,
 				744735D41DFA9DC000B32D64 /* AmuseMenuViewCell.swift in Sources */,
+				74AF02071DFE530A00CD9EE1 /* CustomNavigationController.swift in Sources */,
 				74AF02051DFE48E300CD9EE1 /* RoomNormalViewController.swift in Sources */,
 				744735D71DFAACB600B32D64 /* FunnyViewController.swift in Sources */,
 				741F55C81DDEE85400DC863B /* MainViewController.swift in Sources */,
